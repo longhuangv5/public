@@ -31,22 +31,22 @@ gulp.task('cssmin', function () {//css
         .pipe(concat('custom-mobile.css'))
         .pipe(gulp.dest('dist/custom/mobile'));
 
-    gulp.src(['base/pc_css/bootstrap.css','base/pc_css/*.css'])
+    gulp.src('base/pc_css/*.css')
         .pipe(cssmin({
             keepSpecialComments: '*'
         }))
         .pipe(concat('base-pc.css'))
         .pipe(gulp.dest('dist/base/pc'));
 
-    gulp.src('base/pc_css/**/*.{otf,eot,svg,ttf,woff}')
-        .pipe(gulp.dest('dist/base'));
-
-    gulp.src('tools/pc_css/*.css')
+    gulp.src(['tools/pc_css/bootstrap.css','tools/pc_css/*.css'])
         .pipe(cssmin({
             keepSpecialComments: '*'
         }))
         .pipe(concat('tools-pc.css'))
         .pipe(gulp.dest('dist/tools/pc'));
+
+    gulp.src('tools/pc_css/**/*.{otf,eot,svg,ttf,woff}')
+        .pipe(gulp.dest('dist/tools'));
 
     gulp.src('custom/pc_css/*.css')
         .pipe(cssmin({
