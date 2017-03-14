@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9051fb60-fa90-4ab5-977f-4cf4cf59a01d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/mobile_js/ocLazyLoad.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/pc_js/ocLazyLoad.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/base/mobile_js/ui-load.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/base/pc_css/animate.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/base/pc_css/app.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/base/pc_css/bootstrap.css" afterPath="" />
@@ -29,7 +26,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/base/pc_css/fonts/sourcesanspro/sourcesanspro-light.woff" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/base/pc_css/fonts/sourcesanspro/sourcesanspro.woff" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/base/pc_css/simple-line-icons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/base/pc_js/ui-load.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/custom/mobile_js/ionic-datepicker.bundle.min.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/base/mobile/base-mobile.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/base/mobile/base-mobile.js" afterPath="" />
@@ -58,7 +54,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/tools/pc/tools-pc.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/mobile_js/app.js" afterPath="$PROJECT_DIR$/base/mobile_js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/pc_js/app.js" afterPath="$PROJECT_DIR$/base/pc_js/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -89,8 +84,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/base/mobile_js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="209">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -414,12 +409,12 @@
       <workItem from="1489108508993" duration="13715000" />
       <workItem from="1489369810904" duration="8564000" />
       <workItem from="1489393528156" duration="5613000" />
-      <workItem from="1489458488934" duration="5830000" />
+      <workItem from="1489458488934" duration="6548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44245000" />
+    <option name="totallyTimeSpent" value="44963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1423,8 +1418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/base/mobile_js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="209">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

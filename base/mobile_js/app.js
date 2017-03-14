@@ -6,6 +6,6 @@
 		'ngAnimate',
         'ui.router',
         'oc.lazyLoad',
-        'ngSanitize',
+        'ngSanitize'
 	]);
 })()
