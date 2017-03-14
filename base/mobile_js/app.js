@@ -5,7 +5,7 @@
 	    'ionic',
 		'ngAnimate',
         'ui.router',
-        'ui.load',
+        'oc.lazyLoad',
         'ngSanitize',
 	]);
 })()
