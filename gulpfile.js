@@ -38,7 +38,7 @@ gulp.task('cssmin', function () {//css
         .pipe(concat('base-pc.css'))
         .pipe(gulp.dest('dist/base/pc'));
 
-    gulp.src(['tools/pc_css/bootstrap.css','tools/pc_css/*.css'])
+    gulp.src(['tools/pc_css/bootstrap.css','tools/pc_css/**/*.css'])
         .pipe(cssmin({
             keepSpecialComments: '*'
         }))
@@ -101,7 +101,7 @@ gulp.task('jsmin', function () {//js
         .pipe(concat('base-pc.js'))
         .pipe(gulp.dest('dist/base/pc'));
 
-    gulp.src('tools/pc_js/*.js')
+    gulp.src(['tools/pc_js/toaster.js','tools/pc_js/*.js'])
         .pipe(uglify({
             mangle: {except: ['require', 'exports', 'module', '$']},
             compress: true,
