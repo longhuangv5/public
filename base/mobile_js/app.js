@@ -6,6 +6,8 @@
 		'ngAnimate',
         'ui.router',
         'oc.lazyLoad',
-        'ngSanitize'
+        'ngSanitize',
+		'ionic-datepicker',
+		'ionic-timepicker'
 	]);
 })()

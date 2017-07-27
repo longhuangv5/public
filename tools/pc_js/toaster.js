@@ -41,7 +41,7 @@ angular.module('toaster', ['ngAnimate'])
     //'fade-out': 1000,           // done in css
     // 'on-fade-out': undefined,  // not implemented
     //'extended-time-out': 1000,    // not implemented
-    'time-out': 5000, // Set timeOut and extendedTimeout to 0 to make it sticky
+    'time-out': 2000, // Set timeOut and extendedTimeout to 0 to make it sticky
     'icon-classes': {
         error: 'toast-error',
         info: 'toast-info',
@@ -129,7 +129,16 @@ function ($compile, $timeout, $sce, toasterConfig, toaster) {
             });
 
             scope.$on('toaster-clearToasts', function () {
-                scope.toasters.splice(0, scope.toasters.length);
+                var forNum = scope.toasters.length;
+                for(var i=0;i<forNum;i++){
+                    for(var j=0;j<scope.toasters.length;j++){
+                        if(scope.toasters[j].type === 'toast-wait'){
+                            scope.toasters.splice(j,1);
+                            break;
+                        }
+                    }
+                }
+                // scope.toasters.splice(0, scope.toasters.length);
             });
         },
         controller: ['$scope', '$element', '$attrs', function ($scope, $element, $attrs) {

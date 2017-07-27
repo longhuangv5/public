@@ -101,7 +101,7 @@ gulp.task('jsmin', function () {//js
         .pipe(concat('base-pc.js'))
         .pipe(gulp.dest('dist/base/pc'));
 
-    gulp.src(['tools/pc_js/toaster.js','tools/pc_js/*.js'])
+    gulp.src(['tools/pc_js/ui-bootstrap-tpls.js','tools/pc_js/toaster.js','tools/pc_js/*.js'])
         .pipe(uglify({
             mangle: {except: ['require', 'exports', 'module', '$']},
             compress: true,
@@ -122,6 +122,17 @@ gulp.task('jsmin', function () {//js
         }))
         .pipe(concat('custom-pc.js'))
         .pipe(gulp.dest('dist/custom/pc'));
+
+    gulp.src('other/umeditor.js')
+        .pipe(uglify({
+            mangle: {except: ['require', 'exports', 'module', '$']},
+            compress: true,
+            preserveComments: function () {
+                return false;
+            }
+        }))
+        .pipe(concat('umeditor.min.js'))
+        .pipe(gulp.dest('dist/other/js'));
 });
 
 gulp.task('default', ['cssmin', 'jsmin']);

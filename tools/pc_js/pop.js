@@ -1,11 +1,11 @@
 /**
  * Created by Administrator on 2017/3/15 0015.
  */
-(function() {
+!function() {
 	'use strict'
 
-	app.factory('pop', ['toaster', '$modal', function(toaster, $modal) {
-		var types = {
+	app.factory('pop', ['toaster', '$modal','$timeout', function(toaster, $modal,$timeout) {
+		var type = {
 			success: 'success',
 			info: 'info',
 			wait: 'wait',
@@ -13,11 +13,42 @@
 			error: 'error'
 		}
 
+		var number = 0;
+		var messages = ['正在与后台小哥哥积极交流...','拼命搬运数据中...','一大批数据正在赶来...'],idx = 0;
+
 		return {
 			toast: toast,
+			wait:wait,
+			clear:clear,
 			dialog: dialog,
-			types: types
+			types: type
 		}
+		
+        // function wait() {
+			// $('i.fa-save').removeClass('fa-save').addClass('fa-spinner').addClass('rotate-infinite').closest('button').attr('disabled','true');
+        // }
+        //
+        // function clear() {
+        //     $('i.fa-spinner').removeClass('rotate-infinite').removeClass('fa-spinner').addClass('fa-save').closest('button').removeAttr('disabled');
+        // }
+
+        function clear() {
+            $timeout(function () {
+				number--;
+				if(number === 0){
+					idx++;
+					toaster.clear();
+					$timeout(function () {
+						idx--;
+					},500);
+                }
+            },500);
+        }
+
+        function wait(text) {
+			number++ ;
+            if(number === 1)toaster.pop('wait', '',text ? text : messages[idx] ,-1);
+        }
 
 		function toast(title, message, type) {
 			toaster.pop(type, title, message);
@@ -67,4 +98,4 @@
 			if(mm.site.callback)mm.site.callback();
 		}
 	}])
-})()
+}()
